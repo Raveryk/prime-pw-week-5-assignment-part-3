@@ -33,3 +33,18 @@ function showCollection( array ) {
 } //end of showCollection
 
 showCollection( collection ); //testing showCollection
+
+function findByArtist( artist ) {
+  let artistList = [ ];
+  for( let list of collection ) {
+    if( artist === list.artist ) {
+      artistList.push(list)
+    }
+  } return artistList;
+} //end findByArtist
+
+//test findByArtist
+
+console.log(findByArtist( 'The Bad Plus' ) );
+console.log(findByArtist( 'Blake Mills' ) );
+console.log(findByArtist( 'Billie Eilish' ) );
