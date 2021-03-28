@@ -61,19 +61,29 @@ function search( artist, year ) {
   for( let item of collection ) { //looping through my collection array
     if( artist === item.artist && year === item.yearPublished ) { //if the artist and year arguments are both found in the collection then it will push that item into the newList array.
       newList.push( item );
-    }  //end of if conditional
-  } return newList; //end of for in loop
+    } //end of if conditional
+    else if ( typeof(artist) === 'undefined' && typeof(year) === 'undefined' ) { //this is to try and seperate the difference between search arguments that didn't match anything in the search function and a search function that was empty without any arguments. If the function arguments are empty it should return the entire collection array.
+      return collection;
+    } //end of else if conditional
+  } return newList; //end of for in loop - this will return the newList array whether or not anything has been pushed into it.
 } //end of search
 
 
 
-
+//**FUNCTION TESTS**//
 
 console.log( search( 'Blake Mills', 2020  ));
 console.log(newList);
+//
+// console.log( search( 'Blake Mills', 2010 ));
+// console.log(newList);
 
-console.log( search( 'Blake Mills', 2010 ));
-console.log(newList);
+// console.log( search( 2010 ));
+// console.log(newList);
+
+// console.log( search() );
+
+
 
 
 
