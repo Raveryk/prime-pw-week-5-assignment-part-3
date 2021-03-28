@@ -48,3 +48,61 @@ function findByArtist( artist ) {
 console.log(findByArtist( 'The Bad Plus' ) );
 console.log(findByArtist( 'Blake Mills' ) );
 console.log(findByArtist( 'Billie Eilish' ) );
+
+
+
+//**STRETCH GOALS/////
+
+//**I didn't finish the first part of the stretch goal by the 6PM submission deadline but this is what I had going on at that time. I'm going to keep working on it to see if I can figure it out by this evening.
+
+let newList = [ ];
+
+function search( artist, year ) {
+  for( let item of collection ) { //looping through my collection array
+    if( artist === item.artist && year === item.yearPublished ) { //if the artist and year arguments are both found in the collection then it will push that item into the newList array.
+      newList.push( item );
+    }  //end of if conditional
+  } return newList; //end of for in loop
+} //end of search
+
+
+
+
+
+console.log( search( 'Blake Mills', 2020  ));
+console.log(newList);
+
+console.log( search( 'Blake Mills', 2010 ));
+console.log(newList);
+
+
+
+// console.log( search( 'Blake Mills', 2010  ));
+// console.log( search( 'Sylvan Esso', 2020  ));
+
+
+// console.log( search( 'Blake Mills', 2010 ));
+// console.log( search( 'Sylvan Esso', 2020 ));
+
+// let album = {
+//   title: '',
+//   artist: '',
+//   yearPublished: 0
+// };
+
+
+// function search( { artist: artist, yearPublished: yearPublished } ) {
+//   let newList = [ ];
+//   for( let i=0; i<collection.length; i++ ) {
+//     if( album.artist === collection[i].artist && album.yearPublished === collection[i].yearPublished ) {
+//       newList.push( collection[i] );
+//     }
+//     //end of if conditional
+//     // else {
+//     //   return collection;
+//     // } //end of else if
+//   } return newList;
+//   //end of for in loop
+// } //end of search
+// //
+// //
